@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+    <title>P2-Events</title>
+</head>
+
+<body>
+    <!-- <div id="app">
+    </div>
+
+    <div id="app2">
+        {{ title }}
+    </div>
+
+    <script>
+        const vm1 = new Vue({
+            data: {
+                title: 'Title from vm1'
+            },
+            template: '<h1> {{ title }} </h1>'
+        });
+
+        vm1.$mount('#app')
+
+        const vm2 = new Vue({
+            el: '#app2',
+            data: {
+                title: vm1.title,
+            }
+        });
+
+        
+    </script> -->
+    <app></app>
+
+    <script>
+        Vue.component('app', {
+            template: '<h1> Hello </h1>'
+        })
+
+        // const vm1 = new Vue({
+        //     data: {
+        //         title: 'Title from vm1'
+        //     },
+        //     template: '<h1> {{ title }} </h1>'
+        // });
+        
+    </script>
+
+</body>
+
+</html>

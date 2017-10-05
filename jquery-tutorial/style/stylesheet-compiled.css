@@ -1,0 +1,24 @@
+body.login {
+  background-color: #CD5C5C; }
+
+.container.container-login {
+  max-width: 420px;
+  margin-top: 18vh; }
+  .container.container-login .form-group:last-child {
+    text-align: center; }
+  .container.container-login .block-img-login {
+    max-width: 200px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center; }
+    .container.container-login .block-img-login img {
+      width: 100%; }
+  .container.container-login input[type="checkbox"] {
+    cursor: pointer; }
+  .container.container-login button[type="submit"], .container.container-login button[type="reset"] {
+    cursor: pointer; }
+
+.container-form {
+  margin-top: 10vh; }
+
+/*# sourceMappingURL=stylesheet-compiled.css.map */

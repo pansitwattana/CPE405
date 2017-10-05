@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JSON Crash course</title>
+  
+</head>
+
+<body>
+
+  <ul id='people'>
+
+  </ul>
+
+  <script>
+    var person = {
+      name: 'Brad',
+      age: 35,
+      address: {
+        street: '239 Huaykaew',
+        city: 'Chiang Mai',
+        country: 'TH'
+      },
+      contacts: ['john', 'jane']
+    }
+    console.log(person.address.street)
+    document.getElementById('name').innerHTML = person.name
+
+    var contactList = ''
+    for (var i = 0;  i < person.contacts.length;  i++) {
+      var contact = person.contacts[i];
+      console.log(contact)
+      contactList += '<li>' + contact + '</li>'
+    }
+    document.getElementById('contact').innerHTML = contactList
+    var xhttp = new XMLHttpRequest();
+
+    // execute every time the status of the object changes
+    xhttp.onreadystatechange = function () {
+      // readyState 4 = the respond has been captured
+      // status 200 = HTTP status OK
+      if (this.readyState == 4 && this.status == 200) {
+        console.log(xhttp.responseText);
+        var response = JSON.parse(xhttp.responseText);
+        var people = response.people;
+
+        var output = '';
+        for (var i = 0; i < people.length; i++) {
+          console.log(people[i]);
+          output += '<li>' + people[i].name + '</li>';
+        }
+        document.getElementById('people').innerHTML = output;
+      }
+    };
+
+    // making a request to a specific file or URL
+    xhttp.open("GET", "people.json", true);
+    xhttp.send();
+  </script>
+
+</body>
+
+</html>

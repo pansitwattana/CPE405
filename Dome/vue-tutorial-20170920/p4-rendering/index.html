@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<title>P4-Rendering</title>
+</head>
+
+<body>
+	<div id="app">
+		<!-- <button v-on:click='show=!show'>Toggle</button>
+		<p v-if='show'>You can see me!</p>
+		<p v-else>Now you see me again!!</p>
+		<p v-show="show">Show me or Not</p>
+		<p>Do you also see me?</p> -->
+		<h1>Ingredients</h1>
+		<ul>
+			<li v-for='(ingredient, index) in ingredients'>
+				{{ (index + 1) + ' ' + ingredient }}
+			</li>
+		</ul>
+		<hr>
+		<h1>Person List</h1>
+		<ul>
+			<li v-for='(person,index) in persons'>
+				<div v-for='(value, key) in person'>
+					{{ key + " : " + value}}
+				</div>
+			</li>
+		</ul>
+		<hr>
+		<span v-for="n in 20"> {{ n-1 }} </span>
+	</div>
+
+	<script>
+		// new Vue({
+		// 	el: '#app',
+		// 	data: {
+		// 		show: true
+		// 	}
+		// })
+		new Vue({
+			el: '#app',
+			data: {
+				ingredients: ['meat', 'fruit', 'cookies'],
+				persons: [{
+						name: 'Max',
+						age: 27,
+						color: 'red'
+					},
+					{
+						name: 'Anna',
+						age: 'unknown',
+						color: 'blue'
+					}
+				]
+			}
+		});
+	</script>
+</body>
+
+</html>
