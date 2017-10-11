@@ -20,8 +20,8 @@
 var headerTitle = document.getElementById('header-title');
 // var header = document.getElementById('main-header');
 // console.log(headerTitle);
-headerTitle.textContent = 'Hello';
-// headerTitle.innerText = 'Goodbye';
+// headerTitle.textContent = 'Hello';
+headerTitle.innerText = 'Goodbye';
 // console.log(headerTitle.innerText);
 // headerTitle.innerHTML = '<h1>Hello</h1>';
 // header.style.borderBottom = 'solid 3px #000';
@@ -164,9 +164,9 @@ var itemList = document.querySelector('#items');
 
 // EVENTS //
 
-// var button = document.getElementById('button').addEventListener('click', buttonClick);
+var button = document.getElementById('button').addEventListener('click', buttonClick);
 
-// function buttonClick(e){
+function buttonClick(e){
   // console.log('Button clicked');
   // document.getElementById('header-title').textContent = 'Changed';
   // document.querySelector('#main').style.backgroundColor = '#f4f4f4';
@@ -190,15 +190,15 @@ var itemList = document.querySelector('#items');
   // console.log(e.altKey);
   // console.log(e.ctrlKey);
   // console.log(e.shiftKey);
-// }
+}
 
 // var button = document.getElementById('button');
 // var box = document.getElementById('box');
 
-// button.addEventListener('click', runEvent);
-// button.addEventListener('dblclick', runEvent);
-// button.addEventListener('mousedown', runEvent);
-// button.addEventListener('mouseup', runEvent);
+button.addEventListener('click', runEvent);
+button.addEventListener('dblclick', runEvent);
+button.addEventListener('mousedown', runEvent);
+button.addEventListener('mouseup', runEvent);
 
 // box.addEventListener('mouseenter', runEvent);
 // box.addEventListener('mouseleave', runEvent);
@@ -229,7 +229,7 @@ var itemList = document.querySelector('#items');
 
 // form.addEventListener('submit', runEvent);
 
-// function runEvent(e){
+function runEvent(e){
 //   e.preventDefault();
 //   console.log('EVENT TYPE: '+e.type);
 
@@ -239,4 +239,4 @@ var itemList = document.querySelector('#items');
 //   output.innerHTML = '<h3>MouseX: '+e.offsetX+' </h3><h3>MouseY: '+e.offsetY+'</h3>';
 
 //   document.body.style.backgroundColor = "rgb("+e.offsetX+","+e.offsetY+", 40)";
-// }
+}
