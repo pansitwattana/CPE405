@@ -5,7 +5,7 @@
         <p>Username: </p><input type="text" v-model="name" @keyup="editName">
         <br>
         <p>{{ age }}</p>
-        <button @click="editAge">Name+=2</button>
+        <button @click="editAge">Age+=2</button>
     </div>
 </template>
 
