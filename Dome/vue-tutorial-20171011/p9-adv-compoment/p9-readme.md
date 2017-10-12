@@ -116,6 +116,9 @@ It is possible to setup a **default content** in the case that there is no data 
 
 There is a way to implement dynamic components in Vue.js. The **component** tag will be used for this.
 
+แสดงทีละอัน
+
+
 ```
 // App.vue
 <template>
@@ -127,8 +130,8 @@ There is a way to implement dynamic components in Vue.js. The **component** tag 
     <p> {{ selectedComponent }}</p>
     
     <!-- implement dynamic components -->
-    <component :is="selectedComponent">
-        <p>Default Content</p>
+    <component :is="selectedComponent"> //จะให้ component เป็นอะไร
+        <p>Default Content</p> //ค่าที่ส่งเข้าไป
     </component>
                
 ...
@@ -156,6 +159,9 @@ There is a way to implement dynamic components in Vue.js. The **component** tag 
 ```
 
 ### Keeping Dynamic Component Alive
+
+ทำให้ค่าใน Component ยังอยู่ ไม่หายเมื่อเปลี่ยนหน้า
+
 Are these components get created everytime? or do we use the existing components? 
 By default, each component is destroyed and recreated evertime. However, it is possible to keep them alive by using the **keep-alive** tag.
 

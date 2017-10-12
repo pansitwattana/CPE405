@@ -5,7 +5,9 @@
             <!-- passing each server data to Server component -->
             <app-server
                 v-for="server in servers"
-                :key="server"></app-server>
+                :key="server.id"
+                :serverProp="server">
+                </app-server>
             </ul>
         </ul>
     </div>
@@ -13,6 +15,7 @@
 
 <script>
 import Server from './Server.vue';
+import { serverBus } from '../../main'
 
 export default {
     data: function() {
@@ -30,6 +33,18 @@ export default {
     },
     components: {
         appServer: Server
+    },
+    created() {
+        serverBus.$on('changeStatus', (id) => {
+            const newServers = this.servers.map((server) => {
+                const newServer = server
+                if (server.id === id) {
+                    newServer.status = 'Normal'
+                }
+                return newServer
+            })
+            this.servers = newServers    
+        })
     }
 }
 </script>

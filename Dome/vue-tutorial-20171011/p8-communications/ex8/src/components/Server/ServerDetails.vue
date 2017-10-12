@@ -1,6 +1,6 @@
 <template>
     <div class="col-xs-12 col-sm-6">
-        <p>Server Details component are currently not updated</p>
+        <p>{{ renderServer() }}</p>
         <hr>
         <button @click="resetStatus">Change to Normal</button>
     </div>
@@ -17,10 +17,22 @@
             }
         },
         methods: {
-          
+            resetStatus: function() {
+                if (this.server)
+                    serverBus.$emit('changeStatus', this.server.id)  
+            },
+            renderServer: function() {
+                if (!this.server)
+                    return 'Server Details component are currently not updated'
+                else {
+                    return `Server # ${this.server.id} ${this.server.status}`
+                }
+            },
         },
         created() {
-            
+            serverBus.$on('showServer', (server) => {
+                this.server = server
+            })
         }
     }
 </script>
