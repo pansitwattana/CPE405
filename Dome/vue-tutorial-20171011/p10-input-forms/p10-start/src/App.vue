@@ -10,8 +10,10 @@
                         <input
                                 type="text"
                                 id="email"
-                                class="form-control">
+                                class="form-control"
+                                v-model.lazy="userData.email">
                     </div>
+                    {{ userData.email }}
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input
@@ -36,7 +38,8 @@
                     <textarea
                             id="message"
                             rows="5"
-                            class="form-control"></textarea>
+                            class="form-control"
+                            v-model="message"></textarea>
                 </div>
             </div>
             <div class="row">
@@ -80,7 +83,7 @@
                     <select
                             id="priority"
                             class="form-control">
-                        <option></option>
+                        <option>High</option>
                     </select>
                 </div>
             </div>
@@ -121,6 +124,17 @@
 
 <script>
     export default {
+        data() {
+            return {
+                // an object of user data
+                userData: {
+                    email: '',
+                    password: '',
+                    age: 28
+                },
+                message: ''
+            }
+        }
     }
 </script>
 

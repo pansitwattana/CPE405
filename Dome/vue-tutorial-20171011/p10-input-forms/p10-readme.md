@@ -16,7 +16,7 @@ Instead of define multiple data properties separately. We can group them into **
                 type="text"
                 id="email"
                 class="form-control"
-                v-model.lazy="userData.email">
+                v-model.lazy="userData.email"> // lazy -> loss focus to update
     </div>
     {{ userData.email }}
     <div class="form-group">
@@ -94,14 +94,14 @@ We can use an **array** to stores multiple selections. **v-model** does many tri
               type="checkbox"
               id="sendmail"
               value="SendMail"
-              v-model="sendMail"> Send Mail
+              v-model="sendMail"> Send Mail //keep in array
       </label>
       <label for="sendInfomail">
           <input
               type="checkbox"
               id="sendInfomail"
               value="SendInfoMail"
-              v-model="sendMail"> Send Infomail
+              v-model="sendMail"> Send Infomail //keep in array
       </label>
   </div>
 ...
