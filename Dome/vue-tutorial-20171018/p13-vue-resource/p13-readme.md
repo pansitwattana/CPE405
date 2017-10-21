@@ -131,7 +131,7 @@ Next, we create a **fetchData()** method and use the **$http.get()** method to m
                     console.log(data);      // this prints the promise object NOT the data object
                 }, error => {
                     console.log(error);
-                });)
+                });
             }
         }
     }

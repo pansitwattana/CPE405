@@ -39,7 +39,7 @@
                             id="message"
                             rows="5"
                             class="form-control"
-                            v-model="message"></textarea>
+                            v-model="mess"></textarea>
                 </div>
             </div>
             <div class="row">

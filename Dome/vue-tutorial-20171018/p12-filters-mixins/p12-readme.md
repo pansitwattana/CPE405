@@ -14,10 +14,10 @@ A filter is a syntax used in template that helps transform output. All the filte
     }
   },
   filters: {
-    'to-uppercase'(value) {
+    'to-uppercase'(value) { <- Choose one
       return value.toUpperCase();
     },
-    toUppercase(value) {
+    toUppercase(value) { <- Choose one
 
     }
   }
@@ -27,7 +27,7 @@ A filter is a syntax used in template that helps transform output. All the filte
 <template>
 ...
   <!-- apply filter -->
-  <p> {{ text | toUppercase }} </p>  <!-- similar to Angular 2 -->
+  <p> {{ text | toUppercase }} </p>  <!-- similar to Angular 2  สามารถใช้ต่อๆกันหลายอันได้ --> 
 ...
 </template>
 ```
@@ -113,6 +113,8 @@ Sometimes, a computed property is better than using filter.
 ```
 
 ### Mixins
+`Pass by value`
+
 Consider the following code duplication. Both the **parent** (App.vue) and the **child** have the **same** data and computed properties. How can we avoid such code duplication? For that we can use **Mixins**.
 
 By outsource the common code to another javascript (.js) file, we created a mixin.

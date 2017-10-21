@@ -39,7 +39,7 @@ export default {
             const newServers = this.servers.map((server) => {
                 const newServer = server
                 if (server.id === id) {
-                    newServer.status = 'Normal'
+                    newServer.status = server.status === 'Normal' ? 'Critical' : 'Normal'
                 }
                 return newServer
             })

@@ -178,7 +178,7 @@ There are two parts. Firstly, we can define the list of options as **array** in 
       <option 
         v-for="p in priorities" 
         :key="p" 
-        :selected="p == 'Medium'">{{ p }}</option>
+        :selected="p == 'Medium'">{{ p }}</option> //Default Medium
   </select>
 ...
   <p>Gender: {{ gender }}</p>
@@ -290,6 +290,7 @@ export default {
           <button
               class="btn btn-primary"
               @click.prevent="submitted">Submit!
+              <!-- .prevent -> preventDefault (refresh) -->
               <!-- let VueJS handle the submit -->
               
           </button>
