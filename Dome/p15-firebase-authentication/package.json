@@ -1,5 +1,5 @@
 {
-  "name": "bookmarkervue",
+  "name": "firebasevue",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "pansitwattana <pansit.wt@gmail.com>",
@@ -12,10 +12,7 @@
   "dependencies": {
     "firebase": "^4.6.0",
     "md5": "^2.2.1",
-    "uuid": "^3.1.0",
-    "vue": "^2.5.2",
-    "vue-resource": "^1.3.4",
-    "vue-router": "^3.0.1"
+    "vue": "^2.5.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

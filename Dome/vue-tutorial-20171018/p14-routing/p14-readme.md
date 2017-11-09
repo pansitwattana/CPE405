@@ -531,6 +531,8 @@ We may want to control if the user allowed to enter a certain route or leave it.
 ### Using the "beforeEnter" Guard
 We can call a method **router.beforeEach(...)** in **main.js** to define what to do before entering each route using *function*. 
 
+ทุกๆ Request ทุกส่งออกจะ print 'global beforeEach'
+
 ```
 // main.js
 ...

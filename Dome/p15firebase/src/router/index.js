@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
+import HelloWorld from '@/components/HelloWorld'
 import Login from '@/components/Login'
-import Signup from '@/components/SignUp'
+import SignIn from '@/components/Signin'
 
 Vue.use(Router)
 
@@ -10,11 +10,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: Home,
-      meta: {
-        requiresAuth: true
-      }
+      name: 'Hello',
+      component: HelloWorld
     },
     {
       path: '/login',
@@ -22,9 +19,13 @@ export default new Router({
       component: Login
     },
     {
-      path: '/signup',
-      name: 'Signup',
-      component: Signup
+      path: '/signin',
+      name: 'Signin',
+      component: SignIn
+    },
+    {
+      path: '*',
+      redirect: { name: 'Login' }
     },
   ]
 })
