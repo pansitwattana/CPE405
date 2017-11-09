@@ -22,6 +22,7 @@
           :data="result"
           :onDelete="onDelete"></bookmark-result>
       </div>
+      <button v-on:click="logout" >Logout</button>
     </div>
 </template>
 
@@ -53,6 +54,11 @@ export default {
     onDelete(id) {
       console.log(id)
       firebase.database().ref('bookmark/' + id).remove()
+    },
+    logout() {
+      firebase.auth().signOut().then(() => {
+        this.$router.push({name: 'Login'});
+      })
     }
   },
   created() {
