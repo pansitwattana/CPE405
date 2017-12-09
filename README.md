@@ -15,6 +15,10 @@ https://github.com/pansitwattana/CPE405/tree/master/Dome/DOM
 
 ## Vue.js
 
+### Basic
+
+https://github.com/pansitwattana/CPE405/tree/master/Dome/jsfiddle
+
 ### Event Handling
 eg. Mouse Event (onClick)
 
@@ -68,6 +72,10 @@ https://github.com/pansitwattana/CPE405/tree/master/Dome/vue-tutorial-20171018/p
 ใช้ทำ Single Page Application
 
 https://github.com/pansitwattana/CPE405/tree/master/Dome/vue-tutorial-20171018/p14-routing
+
+### Firebase Authentication
+
+https://github.com/pansitwattana/CPE405/tree/master/Dome/p15-firebase-authentication
 
 ### Bookmaker Homework
 
