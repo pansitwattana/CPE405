@@ -1,7 +1,7 @@
 # CPE405
 JavaScript Track
 
-# All Slides
+## All Slides
 
 https://github.com/pansitwattana/CPE405/tree/master/slides
 
